@@ -31,7 +31,7 @@
 </head>
 
 <body data-spy="scroll" data-target="#main-navbar">
-<div class="page-loader"></div>
+<!--<div class="page-loader"></div>-->
 <!-- Display loading image while page loads -->
 <div class="body">
     <!-- body div ends -->
@@ -143,7 +143,7 @@
                 </div>
                 <!-- /.row -->
                 <div class="row">
-                    <button class="btn btn-custome col-sm-4 col-sm-offset-4">Signup</button>
+                    <a href="#signup" class="btn btn-custome page-scroll col-sm-4 col-sm-offset-4">Signup</a>
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -201,7 +201,7 @@
                 </div>
                 <!-- /.row -->
                 <div class="row">
-                    <button class="btn btn-custome col-sm-4 col-sm-offset-4">Signup</button>
+                    <a href="#signup" class="btn btn-custome page-scroll col-sm-4 col-sm-offset-4">Signup</a>
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -211,6 +211,64 @@
     </section>
     <!-- End about section -->
 
+    <!-- Begin about section -->
+    <section id="signup" class="page text-center">
+        <!-- Begin page header-->
+        <div class="page-header-wrapper">
+            <div class="container">
+                <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
+                    <h2>Sign up for just $5/month </h2>
+                    <h5>Sign up now for exclusive early admission to seatHero when we launch and, for limited time, receive up to THREE MONTHS FREE!</h5>
+                </div>
+                <div class="col-md-offset-4">
+                <a href="{{url('facebook_signup')}}" type="button"><img class="img-responsive" src="{{ asset('/img/signup_fb.png') }}" /> </a>
+                </div>
+                <div class="devider"></div>
+            </div>
+        </div>
+        <!-- End page header-->
+
+        <!-- Begin rotate box-1 -->
+        <div class="rotate-box-2-wrapper">
+            <div class="container">
+                {!! Form::open(array('url'=>URL::to('mysignup'),'class'=>'form-horizontal','method' => 'POST','id'=>'register-form', 'novalidate'=>'novalidate','enctype'=>'multipart/form-data')) !!}
+                <div class="row  col-md-offset-3">
+                    <div class="col-md-4 col-sm-4 form-group">
+                        <input type="text" name="user_f_name" value="{{ Input::old('user_f_name') }}" placeholder="First Name" class="form-control" id="user_f_name">
+                    </div>
+                    <div class="col-md-4 col-sm-4 form-group">
+                        <input type="text" name="user_l_name" value="{{ Input::old('user_l_name') }}" placeholder="Last Name" class="form-control" id="user_l_name">
+                    </div>
+                </div>
+                <div class="row col-md-offset-3">
+                    <div class="col-md-4 col-sm-4 form-group">
+                        <input type="text" name="user_zip" value="{{ Input::old('user_zip') }}" placeholder="Zip Code" class="form-control" id="user_zip">
+                    </div>
+                    <div class="col-md-4 col-sm-4 form-group">
+                        <input type="text" name="user_email" value="{{ Input::old('user_email') }}" placeholder="Email Address" class="form-control" id="user_email">
+                    </div>
+                </div>
+                <!-- /.row -->
+                <div class="col-md-offset-3">
+                <div class="col-md-8 col-sm-8 form-group">
+                <h5>Your preferred theaters : (You can select more than one)</h5>
+                    <select name="preferred_theater" class="form-control">
+                        <option value=""></option>
+                    </select>
+                </div>
+                </div>
+                <!-- /.row -->
+                <div class="row">
+                    <button class="btn btn-custome col-sm-4 col-sm-offset-4">Create Account</button>
+                </div>
+                <div class="clearfix"></div>
+                {!! Form::close() !!}
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- End rotate box-1 -->
+    </section>
+    <!-- End about section -->
 
     <a href="#" class="scrolltotop"><i class="fa fa-arrow-up"></i></a>
     <!-- Scroll to top button -->

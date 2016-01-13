@@ -1404,3 +1404,30 @@ color:#ffffff;
 .login-menu{
     border: 1px solid #FFFFFF;
 }
+
+.signup-btn{
+    border: 1px solid #2A9FD8;
+    background: rgb(255, 252, 21);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-indent: -9999px;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-select: none;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+
+a.facebook img {
+    width: 18%;
+    border-radius: 50px;
+    background-color: #353535;
+
+}
+a.facebook img:hover {
+    background-color:#4C67A1;
+}
