@@ -109,7 +109,7 @@
                 <div class="row">
                     <div class="col-md-3 col-sm-3">
                         <a class="rotate-box-2 text-center square-icon wow zoomIn animated" data-wow-delay="0.2s">
-                            <img src="{{ asset('/img/step1.PNG') }}" />
+                            <img src="{{ asset('/img/step1.png') }}" />
                             <div class="rotate-box-info">
 
                             </div>
